@@ -51,11 +51,7 @@ export default function Footer({ settings, cmsFooter }: FooterProps) {
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link href={ROUTES.PUBLIC.COURSES} className="hover:text-white transition-colors">
-                  Our Courses
-                </Link>
-              </li>
+
               <li>
                 <Link href={ROUTES.PUBLIC.GALLERY} className="hover:text-white transition-colors">
                   Photo Gallery

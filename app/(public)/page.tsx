@@ -173,31 +173,7 @@ export default async function HomePage() {
       {/* 5. Board Results & Hall of Fame Toppers Wall */}
       <ResultsSection />
 
-      {/* 6. Featured Courses / Main Batches */}
-      {courses.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div className="space-y-2 text-center sm:text-left">
-              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Our Main Batches</h2>
-              <p className="text-slate-500 text-sm">
-                Specialized in-person classroom coaching tailored to the board syllabi.
-              </p>
-            </div>
-            <Link
-              href={ROUTES.PUBLIC.COURSES}
-              className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-800 transition-colors self-center sm:self-end group"
-            >
-              View All Class Courses
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {courses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
-          </div>
-        </section>
-      )}
+
 
       {/* 7. Admission Process 4-Step Roadmap */}
       <AdmissionProcess />

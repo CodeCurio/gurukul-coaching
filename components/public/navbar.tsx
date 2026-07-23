@@ -11,7 +11,6 @@ import { ROUTES } from '../../lib/constants/routes';
 const NAV_ITEMS = [
   { name: 'Home', path: ROUTES.PUBLIC.HOME },
   { name: 'About', path: ROUTES.PUBLIC.ABOUT },
-  { name: 'Courses', path: ROUTES.PUBLIC.COURSES },
   { name: 'Gallery', path: ROUTES.PUBLIC.GALLERY },
   { name: 'Contact', path: ROUTES.PUBLIC.CONTACT },
 ];
