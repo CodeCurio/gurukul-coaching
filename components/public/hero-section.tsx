@@ -19,6 +19,7 @@ const BANNERS = [
   {
     id: 1,
     src: '/assets/banner1.png',
+    mobileSrc: '/assets/mobile-banner1.webp',
     alt: 'Gurukul Coaching Institute Banner 1 - Your Success Our Commitment',
     title: 'Your Success, Our Commitment',
     subtitle: 'Best Guidance for a Brighter Tomorrow with Founder Vishal Pandey',
@@ -27,6 +28,7 @@ const BANNERS = [
   {
     id: 2,
     src: '/assets/banner2.png',
+    mobileSrc: '/assets/mobile-banner2.webp',
     alt: 'Gurukul Coaching Institute Banner 2 - United by Goals, Driven by Success',
     title: 'United by Goals. Driven by Success.',
     subtitle: 'Fostering a supportive learning environment & strong foundation',
@@ -35,6 +37,7 @@ const BANNERS = [
   {
     id: 3,
     src: '/assets/banner3.png',
+    mobileSrc: '/assets/mobile-banner3.webp',
     alt: 'Gurukul Coaching Institute Banner 3 - Beyond Books, Building All-Round Champions',
     title: 'Beyond Books. Building All-Round Champions.',
     subtitle: 'Holistic development through academics, sports, dance, music & talent shows',
@@ -91,7 +94,7 @@ export default function HeroSection({ hero }: HeroSectionProps) {
 
   return (
     <section
-      className="relative w-screen h-screen min-h-screen bg-slate-950 text-white overflow-hidden select-none"
+      className="relative w-full h-[100svh] sm:h-screen sm:min-h-screen bg-slate-950 text-white overflow-hidden select-none"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -107,12 +110,22 @@ export default function HeroSection({ hero }: HeroSectionProps) {
             transition={{ duration: 0.7, ease: 'easeInOut' }}
             className="relative w-full h-full"
           >
+            {/* Desktop Image */}
             <Image
               src={currentBanner.src}
               alt={currentBanner.alt}
               fill
               priority
-              className="object-cover object-center w-full h-full"
+              className="object-cover object-center w-full h-full hidden sm:block"
+              sizes="100vw"
+            />
+            {/* Mobile Image */}
+            <Image
+              src={currentBanner.mobileSrc}
+              alt={currentBanner.alt}
+              fill
+              priority
+              className="object-contain sm:object-cover object-center w-full h-full block sm:hidden"
               sizes="100vw"
             />
             {/* Gradient Overlay for Top Navbar & Bottom Floating Controls Legibility */}
