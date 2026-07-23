@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/public/navbar';
 import Footer from '../../components/public/footer';
+import FloatingContact from '../../components/public/floating-contact';
 import { createClient } from '../../lib/supabase/server';
 
 export const dynamic = 'force-dynamic';
@@ -46,6 +47,7 @@ export default async function PublicLayout({
       <Navbar />
       <main className="flex-grow">{children}</main>
       <Footer settings={settings} cmsFooter={cmsFooter} />
+      <FloatingContact />
     </div>
   );
 }
