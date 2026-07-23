@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server';
 
 import { BookOpen, Target, Eye } from 'lucide-react';
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 export default async function AboutPage() {
   let story = {

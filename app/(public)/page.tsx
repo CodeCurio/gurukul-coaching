@@ -11,7 +11,7 @@ import GalleryGrid from '../../components/public/gallery-grid';
 import { createClient } from '../../lib/supabase/server';
 import { ROUTES } from '../../lib/constants/routes';
 
-export const revalidate = 3600; // Revalidate public homepage content hourly
+export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   let hero = null;

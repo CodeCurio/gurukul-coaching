@@ -3,7 +3,7 @@ import ContactForm from '@/components/public/contact-form';
 
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 export default async function ContactPage() {
   let settings = {

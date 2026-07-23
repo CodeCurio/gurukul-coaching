@@ -3,6 +3,8 @@ import Navbar from '../../components/public/navbar';
 import Footer from '../../components/public/footer';
 import { createClient } from '../../lib/supabase/server';
 
+export const dynamic = 'force-dynamic';
+
 export default async function PublicLayout({
   children,
 }: {
