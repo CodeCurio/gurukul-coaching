@@ -9,8 +9,8 @@ export default async function ContactPage() {
   let settings = {
     institute_name: 'Gurukul Coaching Institute',
     contact_email: 'admissions@gurukulcoaching.com',
-    contact_phone: '+91 98765 43210',
-    address: '12, Education Enclave, Sector 4, New Delhi - 110001',
+    contact_phone: '7985347987',
+    address: 'Dhodhepur Chauraha Ramapur Tarabganj Gonda',
   };
 
   try {
@@ -97,6 +97,19 @@ export default async function ContactPage() {
         {/* Contact Form Block */}
         <div className="lg:col-span-7">
           <ContactForm />
+        </div>
+      </div>
+      <div className="pt-8">
+        <div className="w-full h-[450px] rounded-3xl overflow-hidden shadow-sm border border-slate-200">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.241108109766!2d81.98039!3d26.959263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3999f714b8c07f51%3A0x7be4b90745a5a5ab!2sGurukul%20coaching%20institute!5e0!3m2!1sen!2sin!4v1784883142088!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>

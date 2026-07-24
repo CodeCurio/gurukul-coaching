@@ -8,8 +8,8 @@ export default async function AdminSettingsPage() {
     institute_name: 'Gurukul Coaching Institute',
     logo_storage_path: '',
     contact_email: 'admissions@gurukulcoaching.com',
-    contact_phone: '+91 98765 43210',
-    address: '12, Education Enclave, Sector 4, New Delhi - 110001',
+    contact_phone: '7985347987',
+    address: 'Dhodhepur Chauraha Ramapur Tarabganj Gonda',
     primary_color: '#4338ca', // Default Indigo 700
   };
 

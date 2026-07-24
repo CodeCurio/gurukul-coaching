@@ -7,8 +7,8 @@ values (
   'Gurukul Coaching Institute',
   'logo/logo.svg',
   'admissions@gurukulcoaching.com',
-  '+91 98765 43210',
-  '12, Education Enclave, Sector 4, New Delhi - 110001',
+  '7985347987',
+  'Dhodhepur Chauraha Ramapur Tarabganj Gonda',
   '#4338ca' -- Indigo
 ) on conflict do nothing;
 

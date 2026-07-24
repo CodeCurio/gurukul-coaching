@@ -11,17 +11,29 @@ interface FooterProps {
   cmsFooter?: {
     tagline: string;
     copyright_name: string;
+    facebook_url?: string;
+    instagram_url?: string;
+    youtube_url?: string;
   } | null;
 }
+
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
 
 export default function Footer({ settings, cmsFooter }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const email = settings?.contact_email || 'admissions@gurukulcoaching.com';
-  const phone = settings?.contact_phone || '+91 98765 43210';
-  const address = settings?.address || '12, Education Enclave, Sector 4, New Delhi - 110001';
+  const phone = settings?.contact_phone || '7985347987';
+  const address = settings?.address || 'Dhodhepur Chauraha Ramapur Tarabganj Gonda';
   const tagline = cmsFooter?.tagline || 'Nurturing excellence, conceptual clarity, and academic discipline in physical classrooms since 2014.';
   const copyrightName = cmsFooter?.copyright_name || 'Gurukul Coaching Institute';
+  const instagramUrl = cmsFooter?.instagram_url || 'https://www.instagram.com/_gurukulians?igsh=MWQyNnl3aXh1d3loMA==';
 
   return (
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800">
@@ -87,6 +99,13 @@ export default function Footer({ settings, cmsFooter }: FooterProps) {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Social Links */}
+        <div className="mt-8 pt-6 border-t border-slate-800 flex items-center justify-center gap-6">
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors" aria-label="Instagram">
+            <InstagramIcon className="w-6 h-6" />
+          </a>
         </div>
 
         {/* Bottom Bar */}
